@@ -42,7 +42,7 @@ function bar(x,y,dat,max)
     end
 end
 
-inst = {["test"]={"REDME OVASD EL AZT hasznád egészséggel","README.md","https://raw.githubusercontent.com/BomberPlayz/GitWeb-Sites/master/README.md"}}
+inst = {["serverc_server"]={"server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
 
 gpu.setBackground(colors.blue, true)
 runcmd("clear")
@@ -50,6 +50,13 @@ print("enter the want soft >> ")
 local asd = io.read()
 print("where want to install >> ")
 local asda = io.read()
+
+if asd = "ls" then
+    local iu = 1
+    while iu < getle(inst) + 1 do
+        print(inst[iu])
+    end
+end
 
 local i = 1
 local nyam = false
