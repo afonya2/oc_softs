@@ -85,7 +85,7 @@ while i < getle(inst) + 1 do
             if inst[asd][5] == "true" then
                print("you soft requires reboot!")
                local acca = io.read()
-               if acc == "y" then
+               if acca == "y" then
                     runcmd("reboot")
                else
                     print("returning to shell....")
