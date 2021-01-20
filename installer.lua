@@ -52,10 +52,13 @@ print("where want to install >> ")
 local asda = io.read()
 
 if asd == "ls" then
+    nyam = {"serverc_server","serverc_client"}
     local iu = 1
-    while iu < getle(inst) + 1 do
-        print(inst[iu])
+    while iu < getle(nyam) + 1 do
+        print(nyam[iu])
+        iu = iu + 1
     end
+    os.exit()
 end
 
 local i = 1
