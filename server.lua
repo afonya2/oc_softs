@@ -90,5 +90,6 @@ while true do
             handle:write(ditoo[nyaa])
         end
         handle:close()
+        modem.send(whoi,port,"done!")
     end
 end
