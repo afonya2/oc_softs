@@ -42,7 +42,7 @@ function bar(x,y,dat,max)
     end
 end
 
-inst = {["serverc_server"]={"server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
+inst = {["serverc_server"]={"Server","This is a server","EUKUKA","server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"Client","This is a client","EUKUKA","serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
 
 gpu.setBackground(colors.blue, true)
 runcmd("clear")
@@ -67,10 +67,13 @@ while i < getle(inst) + 1 do
     if inst[asd] then
         nyam = true
         print(inst[asd][1])
+        print(inst[asd][2])
+        print("-----------------")
+        print(inst[asd][3])
         print("accept this shit?")
         local acc = io.read()
         if acc == "y" then
-            local ia = 2
+            local ia = 4
             while ia < getle(inst[asd]) + 1 do
                 print("downloading file: "..inst[asd][ia+1].." ...")
                 runcmd("wget "..inst[asd][ia+1].." /home/"..asda.."/"..inst[asd][ia])
