@@ -51,7 +51,7 @@ local asd = io.read()
 print("where want to install >> ")
 local asda = io.read()
 
-if asd = "ls" then
+if asd == "ls" then
     local iu = 1
     while iu < getle(inst) + 1 do
         print(inst[iu])
