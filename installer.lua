@@ -42,11 +42,11 @@ function bar(x,y,dat,max)
     end
 end
 
-inst = {["serverc_server"]={"Server","This is a server","EUKUKA","true","server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"Client","This is a client","EUKUKA","true","serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
+inst = {["serverc_server"]={"Server","This is a server","0.5 developer","EUKUKA","true","server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"Client","This is a client","0.5 developer","EUKUKA","true","serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
 
 gpu.setBackground(colors.blue, true)
 runcmd("clear")
-print("enter the want soft or ls to get softs >> ")
+print("enter the want soft or type ls to list the softs >> ")
 local asd = io.read()
 print("where want to install >> ")
 local asda = io.read()
@@ -66,14 +66,14 @@ local nyam = false
 while i < getle(inst) + 1 do
     if inst[asd] then
         nyam = true
-        print(inst[asd][1])
+        print(inst[asd][1].." ver: "..inst[asd][3])
         print(inst[asd][2])
         print("-----------------")
-        print(inst[asd][3])
+        print(inst[asd][4])
         print("accept this shit?")
         local acc = io.read()
         if acc == "y" then
-            local ia = 5
+            local ia = 6
             while ia < getle(inst[asd]) + 1 do
                 print("downloading file: "..inst[asd][ia+1].." ...")
                 runcmd("wget "..inst[asd][ia+1].." /home/"..asda.."/"..inst[asd][ia])
@@ -82,7 +82,7 @@ while i < getle(inst) + 1 do
                 ia = ia + 1
             end
             print("done!")
-            if inst[asd][4] == "true" then
+            if inst[asd][5] == "true" then
                print("you soft requires reboot!")
                local acca = io.read()
                if acc == "y" then
