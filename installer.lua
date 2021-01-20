@@ -42,7 +42,7 @@ function bar(x,y,dat,max)
     end
 end
 
-inst = {["serverc_server"]={"Server","This is a server","EUKUKA","server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"Client","This is a client","EUKUKA","serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
+inst = {["serverc_server"]={"Server","This is a server","EUKUKA","true","server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"Client","This is a client","EUKUKA","true","serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
 
 gpu.setBackground(colors.blue, true)
 runcmd("clear")
@@ -73,7 +73,7 @@ while i < getle(inst) + 1 do
         print("accept this shit?")
         local acc = io.read()
         if acc == "y" then
-            local ia = 4
+            local ia = 5
             while ia < getle(inst[asd]) + 1 do
                 print("downloading file: "..inst[asd][ia+1].." ...")
                 runcmd("wget "..inst[asd][ia+1].." /home/"..asda.."/"..inst[asd][ia])
@@ -82,7 +82,19 @@ while i < getle(inst) + 1 do
                 ia = ia + 1
             end
             print("done!")
-            os.exit()
+            if inst[asd][4] == "true" then
+               print("you soft requires reboot!")
+               local acca = io.read()
+               if acc == "y" then
+                    runcmd("reboot")
+               else
+                    print("returning to shell....")
+                    os.exit()
+               end
+            else
+                print("returning to shell....")
+                os.exit()
+            end 
         else
             print("Why not accept this shit?")
             os.exit()
