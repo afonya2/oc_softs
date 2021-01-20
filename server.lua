@@ -76,7 +76,10 @@ while true do
     end
     if ditoo[1] == "fs.upload" then
         local handle = fs.open("/home/pub/"..ditoo[2],"w")
-        handle:write(ditoo[3])
+        local nyaa = 3
+        while nyaa < getle(ditoo) + 1 do
+            handle:write(ditoo[nyaa])
+        end
         handle:close()
         modem.send(whoi,port,"done!")
     end
