@@ -28,6 +28,14 @@ function catc(reas)
     os.exit()
 end
 
+function getle(table) 
+    local le = 0
+    for k,v in pairs(table) do
+        le = le + 1
+    end
+    return le
+end
+
 function runcmd(data)
     local nyam = shell.execute(data)
     return nyam
@@ -75,12 +83,12 @@ while true do
         end
     end
     if ditoo[1] == "fs.upload" then
+        modem.send(whoi,port,"processing....")
         local handle = fs.open("/home/pub/"..ditoo[2],"w")
         local nyaa = 3
         while nyaa < getle(ditoo) + 1 do
             handle:write(ditoo[nyaa])
         end
         handle:close()
-        modem.send(whoi,port,"done!")
     end
 end
