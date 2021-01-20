@@ -46,7 +46,7 @@ inst = {["serverc_server"]={"server.lua","https://raw.githubusercontent.com/afon
 
 gpu.setBackground(colors.blue, true)
 runcmd("clear")
-print("enter the want soft >> ")
+print("enter the want soft or ls to get softs >> ")
 local asd = io.read()
 print("where want to install >> ")
 local asda = io.read()
