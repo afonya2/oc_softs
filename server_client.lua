@@ -48,7 +48,7 @@ thread.create(function()
             catc(mss[2])
         end
         if mss[1] == "done!" then
-            print("server >> done")
+            print("server >> done!")
         end
     end
 end)
