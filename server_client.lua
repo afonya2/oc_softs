@@ -47,6 +47,9 @@ thread.create(function()
         if mss[1] == "client.disconnect.adcli" then
             catc(mss[2])
         end
+        if mss[1] == "done!" then
+            print("server >> done")
+        end
     end
 end)
 
