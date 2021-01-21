@@ -42,7 +42,7 @@ function bar(x,y,dat,max)
     end
 end
 
-inst = {["serverc_server"]={"Server","This is a server","0.5 developer","EUKUKA","true","server.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server.lua"},["serverc_client"]={"Client","This is a client","0.5 developer","EUKUKA","true","serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
+inst = {["serverc_server"]={"Server","This is a server","0.5 developer","EUKUKA","true","server.lua","https://raw.githubusercontent.com/afonya2/oc_softs/main/server.lua"},["serverc_client"]={"Client","This is a client","0.5 developer","EUKUKA","true","serverclient.lua","https://raw.githubusercontent.com/afonya2/oc_wifiserver_client/main/server_client.lua"}}
 
 gpu.setBackground(colors.blue, true)
 runcmd("clear")
